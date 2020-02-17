@@ -1,0 +1,264 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+a {
+    color: white !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+}
+
+.logo,
+.lang {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 1.2em;
+    border-bottom: 2px wheat dashed;
+    cursor: pointer;
+}
+
+.logo {
+    color: white;
+    font-family: "Cinzel";
+}
+
+.lang {
+    right: 0;
+    font-family: Arial;
+    color: #646464;
+    border-bottom: 2px #646464 dashed;
+}
+
+.container-left {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+}
+
+.container-left-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 100%;
+    background: url(../images/images.png) no-repeat 50% 50%;
+    background-size: 120%;
+    animation: animatedBackground1 6s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 5s;
+}
+@keyframes animatedBackground1 {
+    from {
+        background-size: 700%;
+    }
+    to {
+        background-size: 120%;
+    }
+}
+
+.container-right {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 50%;
+    background: url(../images/angular.png) no-repeat 50% 50%;
+    background-size: 90%;
+    animation: animatedBackground2 6s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 5s;
+}
+@keyframes animatedBackground2 {
+    from {
+        background-size: 400%;
+    }
+    to {
+        background-size: 90%;
+    }
+}
+
+.left-img-cap {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: wheat;
+    text-align: center;
+    font-family: "Arial";
+    text-transform: uppercase;
+    line-height: 20px;
+    font-weight: bold;
+}
+.left-img-cap span {
+    font-style: italic;
+}
+
+.left-img-btn {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Cinzel";
+    background: #7dd6ec;
+    font-weight: bold;
+}
+
+.right-img-btn {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Cinzel";
+    background: #eb6f6b;
+    font-weight: bold;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 30%;
+}
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em;
+}
+
+.social-media ul li {
+    padding: 10px 0;
+}
+
+.social-media ul li a {
+    color: #8f8776;
+}
+
+.left-bottom-text {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 48px;
+    font-family: "Cinzel";
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 20px;
+    bottom: 0;
+    right: 0;
+}
+
+.right-upper-text {
+    position: absolute;
+    color: wheat;
+    font-size: 45px;
+    font-family: "Arial";
+    font-weight: lighter;
+    padding: 18px;
+    opacity: 0;
+    animation: blinker 2s linear infinite;
+    animation-delay: 10s;
+}
+.right-upper-text span {
+    font-style: italic;
+}
+@keyframes blinker {
+    50% {
+        opacity: 1;
+    }
+}
+
+.right-bottom-text {
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    font-family: "Tahoma";
+    border-bottom: 2px wheat dashed;
+    font-weight: lighter;
+    padding: 2px;
+    bottom: 5%;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 990px) {
+    .container-left,
+    .container-right {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container-right {
+        top: 100vh;
+        left: 0;
+    }
+
+    .left-img-btn,
+    .social-media {
+        display: none;
+    }
+}
+
+/* ** */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 2;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100vh;
+    background: url(../images/aa.png) no-repeat 0% 0%;
+    background-size: 100%;
+}
+.loader marquee {
+    opacity: 0.3;
+    text-transform: uppercase;
+    line-height: 160px;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-size: 10rem;
+    font-family: "Cinzel";
+}
+
+.loader .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.loader .intro h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(32, 2, 2);
+    font-family: "Cinzel";
+}
+.intro-title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
